@@ -1,4 +1,4 @@
-baseURL = "https://blueturtle.blog/"
+baseURL = "https://blueturtleblog.netlify.com/"
 languageCode = "en-us"
 title = "blue turtle blog"
 PygmentsCodeFences = true
