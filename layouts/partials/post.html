@@ -1,0 +1,14 @@
+<!--articles-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 article-wrapper mt-5 py-2">
+            <h2 class="h4 article-title"><a href="{{.URL}}">{{.Title}}</a></h2>
+            {{ partial "date" . }}
+            {{ partial "turtles" . }}
+            {{ partial "readtime" . }}
+            
+            <span class="small ml-3 tag">#A11y #JS</span>
+            <p class="article-brief mb-0">An accessibility issue being solved.</p>
+        </div>
+    </div>
+</div>        

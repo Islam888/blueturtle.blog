@@ -1,0 +1,10 @@
+{{ if lt .ReadingTime 5 }}
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+{{ else if lt .ReadingTime 10 }}
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+{{ else }}
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+{{ end }}

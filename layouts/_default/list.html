@@ -1,0 +1,6 @@
+{{ define "main"}}
+{{ partial "about" . }}
+{{ range .Pages }}
+    {{ partial "post" . }}
+{{end}}
+{{end}}
