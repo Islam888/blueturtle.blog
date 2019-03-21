@@ -183,3 +183,7 @@ a:hover:not(.social-icon) {
   text-decoration: none;
   border-bottom: 4px solid #d1d1d1;
 }
+
+.para {
+  font-size: 1.2rem;
+}
