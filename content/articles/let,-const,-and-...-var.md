@@ -86,7 +86,7 @@ const x = 5;//Uncaught ReferenceError: x is not defined
 {{% /parawrap %}}
 
 {{% parawrap %}}
-## Declaration & Assignment:pen:
+## Declaration & Assignment 
 
 `var` variables can be re-declared and reassigned different value multiple times in the same scope.
 
@@ -94,13 +94,13 @@ const x = 5;//Uncaught ReferenceError: x is not defined
 
 `const` variables can not be re-declared or reassigned in the same scope. In addition to that they must be declared and assigned a value at the same time. So we can not do that:
 
-{{< highlight js "linenos=table,linenostart=1" >}}
+{{< highlight js "linenos=inline,linenostart=1" >}}
 const y;//Uncaught SyntaxError: Missing initializer in const declaration
 {{</ highlight >}}
 
 But we must do that:
 
-{{< highlight js "linenos=table,linenostart=1" >}}
+{{< highlight js "linenos=inline" >}}
 const y = 5;
 {{</ highlight >}}
 
