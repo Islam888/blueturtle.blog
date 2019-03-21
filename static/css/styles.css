@@ -160,8 +160,8 @@ a:not(.social-icon) {
   border-bottom: 2px solid #d1d1d1;
 }
 
-/* a:hover {
+a:hover:not(.social-icon) {
   color: #d1d1d1;
   text-decoration: none;
   border-bottom: 4px solid #d1d1d1;
-} */
+}
