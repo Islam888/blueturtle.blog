@@ -17,6 +17,14 @@ body {
 .article-title {
   /* font-family: "Raleway", sans-serif; */
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 2rem;
+  color: #de851b;
+}
+.post-title {
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
@@ -28,9 +36,19 @@ body {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.post-title a {
+  text-decoration: none;
+  color: #d1d1d1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 
 
 .article-title a:hover {
+  border-bottom: 4px solid #d1d1d1;
+}
+.post-title a:hover {
   border-bottom: 4px solid #d1d1d1;
 }
 
