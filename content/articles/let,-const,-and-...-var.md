@@ -118,11 +118,11 @@ For the mentioned reasons you should use `const` in all cases except when the va
 {{% parawrap %}}
 **_For further readings_**:
 
-📌The Difference Between Function and Block Scope in JavaScript
+📌[The Difference Between Function and Block Scope in JavaScript](https://medium.com/@josephcardillo/the-difference-between-function-and-block-scope-in-javascript-4296b2322abe)
 
-📌Demystifying JavaScript Variable Scope Hoisting
+📌[Demystifying JavaScript Variable Scope Hoisting](https://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/)
 
-📌What is Hoisting in JavaScript?
+📌[What is Hoisting in JavaScript?](https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1)
 
 {{% /parawrap %}}
 
