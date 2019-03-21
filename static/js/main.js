@@ -1,4 +1,4 @@
-(window.onload = function() {
+/* (window.onload = function() {
     console.log(localStorage.getItem("mood"))
     const moon = document.querySelector('.moon')
     const sun = document.querySelector('.sun')
@@ -54,4 +54,4 @@
     if (typeof(Storage) !== "undefined") {
         setMood(localStorage.getItem("mood"))
     }
-})()
+})() */
