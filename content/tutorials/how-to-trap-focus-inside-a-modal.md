@@ -261,5 +261,4 @@ _**What did I do?**_
 
 - [Find Element based on Attribute Value.](https://stackoverflow.com/questions/2694640/find-an-element-in-dom-based-on-an-attribute-value#16775485)
 
-- End
 {{% /parawrap %}}
