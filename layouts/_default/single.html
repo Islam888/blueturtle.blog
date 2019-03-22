@@ -1,17 +1,14 @@
 {{ define "main" }}
-<div class="container-fluid pt-5 px-5">
+<div class="container-fluid pt-5">
     <div class="row no-gutters">
         <h1 class="article-title h3 col-12">{{.Title}}</h1>
-        <div class="col-6 text-secondary">
-            <div class="small">#A11y #JS</div>
-            <div>{{ partial "date" . }}<span class="pl-3">{{ partial "turtles" . }} {{ partial "readtime" . }} </span></div>
-            
-            
+        <div class="col-12 text-secondary small">
+            {{ partial "tags" . }}
         </div>
-        
-        <br />
-        
-        {{ partial "hrline" . }}
+        <div class="col-12 text-secondary pt-1">
+            <div>{{ partial "date" . }}<span class="pl-3">{{ partial "turtles" . }} {{ partial "readtime" . }} </span></div>
+        </div>    
+        <br />       
         {{.Content}}
     </div>
 </div>
