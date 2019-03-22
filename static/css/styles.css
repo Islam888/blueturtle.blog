@@ -1,6 +1,6 @@
 body {
   background: #221;
-  color: #d1d1d1;
+  color: #d1d1d1; 
   /* font-family: "Montserrat", sans-serif; */
   font-family: 'Josefin Sans', sans-serif;
   -webkit-box-sizing: border-box;
@@ -18,15 +18,14 @@ body {
   /* font-family: "Raleway", sans-serif; */
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   position: relative;
-  font-size: 2rem;
-  color: #de851b;
+  font-size: 1.8rem;
 }
 .post-title {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   position: relative;
 }
 .article-title a {
@@ -45,12 +44,12 @@ body {
 }
 
 
-.article-title a:hover {
+/* .article-title a:hover {
   border-bottom: 4px solid #d1d1d1;
-}
-.post-title a:hover {
+} */
+/* .post-title a:hover {
   border-bottom: 4px solid #d1d1d1;
-}
+} */
 
 .light-theme-body {
   background: #e5e5e5;
@@ -69,7 +68,7 @@ body {
 .light-theme-wrapper a:hover,
 .light-theme-article-wrapper a:hover,
 .light-theme-article-title a:hover {
-  border-bottom: 4px solid #222;
+  /* border-bottom: 4px solid #222; */
 }
 .light-theme-article-wrapper {
   border-left: 3px solid #222;
@@ -106,7 +105,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-style: italic;
   font-weight: 600;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px */;
   color: #1392d3;
   text-decoration: none;
   border: none;
@@ -130,7 +129,7 @@ a.turtle {
   transition: all 0.3s ease;
 }
 .subtitle a:hover {
-  border-bottom: 4px solid #d1d1d1;
+  /* border-bottom: 4px solid #d1d1d1; */
 }
 .time-indicator {
   max-width: 25px;
@@ -145,7 +144,8 @@ a.turtle {
   font-style: italic;
 }
 svg:hover path:nth-of-type(2) {
-  fill: #f7941e;
+  fill: #d1d1d1;
+  cursor: pointer;
 }
 
 
@@ -181,9 +181,10 @@ a:not(.social-icon) {
 a:hover:not(.social-icon) {
   color: #d1d1d1;
   text-decoration: none;
-  border-bottom: 4px solid #d1d1d1;
+  cursor: pointer;
+  /* border-bottom: 4px solid #d1d1d1; */
 }
 
-.para {
+/* .para {
   font-size: 1.2rem;
-}
+} */
