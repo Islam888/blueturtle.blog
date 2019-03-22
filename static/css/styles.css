@@ -103,7 +103,7 @@ body {
 }
 .title {
   font-family: "Raleway", sans-serif;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 600;
   /* letter-spacing: 1px */;
   color: #1392d3;
@@ -120,7 +120,7 @@ a.turtle {
 }
 .subtitle a {
   color: #d1d1d1;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 700;
   text-decoration: none;
   position: relative;
@@ -138,11 +138,7 @@ a.turtle {
 .one-line {
   line-height: 1;
 }
-.tag {
-  color: #f7941e;
-  font-weight: 600 !important;
-  font-style: italic;
-}
+
 svg:hover path:nth-of-type(2) {
   fill: #d1d1d1;
   cursor: pointer;
@@ -161,14 +157,9 @@ code:not(.language-html):not(.language-js):not(.language-css) {
   text-shadow: 1px 1px #eee;
 }
 
-
-pre {
-  border-radius: 5px;
-}
-
 a:not(.social-icon) {
   color: #d1d1d1;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 700;
   text-decoration: none;
   position: relative;
@@ -185,6 +176,24 @@ a:hover:not(.social-icon) {
   /* border-bottom: 4px solid #d1d1d1; */
 }
 
-/* .para {
+.para {
   font-size: 1.2rem;
-} */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tags a {
+  border-bottom: 3px solid #6c757d;
+  font-weight: 600 !important;
+  font-style: italic;
+}
