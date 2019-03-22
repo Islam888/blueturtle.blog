@@ -2,6 +2,7 @@
 title: "Let, Const, and ... Var"
 date: 2019-02-11T14:20:24+02:00
 draft: false
+tags: ["article", "JS"]
 ---
 
 {{% parawrap %}}
@@ -94,14 +95,16 @@ const x = 5;//Uncaught ReferenceError: x is not defined
 
 `const` variables can not be re-declared or reassigned in the same scope. In addition to that they must be declared and assigned a value at the same time. So we can not do that:
 
-{{< highlight js "linenos=inline,linenostart=1" >}}
-const y;//Uncaught SyntaxError: Missing initializer in const declaration
+{{< highlight js "linenos=table,linenostart=1" >}}
+const y;
+//Uncaught SyntaxError: Missing initializer in const declaration
 {{</ highlight >}}
 
 But we must do that:
 
-{{< highlight js "linenos=inline" >}}
+{{< highlight js "linenos=inline,linenostart=1" >}}
 const y = 5;
+
 {{</ highlight >}}
 
 So if your variable would have changed values, declare it using let, if not always use const.
