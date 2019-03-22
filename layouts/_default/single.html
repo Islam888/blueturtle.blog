@@ -2,12 +2,13 @@
 <div class="container-fluid pt-5 px-5">
     <div class="row no-gutters">
         <h1 class="article-title h3 col-12">{{.Title}}</h1>
-        <div class="col-6">
-            <div>{{ partial "date" . }}</div>
-            {{ partial "turtles" . }}
-            {{ partial "readtime" . }}
+        <div class="col-6 text-secondary">
+            <div class="small">#A11y #JS</div>
+            <div>{{ partial "date" . }}<span class="pl-3">{{ partial "turtles" . }} {{ partial "readtime" . }} </span></div>
+            
+            
         </div>
-        <div class="col-6">#A11y #JS</div>
+        
         <br />
         
         {{ partial "hrline" . }}
