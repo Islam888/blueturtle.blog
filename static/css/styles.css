@@ -12,7 +12,7 @@ body {
 }
 .article-wrapper {
   background: #222;
-  border-left: 3px solid #de851b;
+  border-left: 3px solid #d1d1d1;
 }
 .article-title {
   /* font-family: "Raleway", sans-serif; */
@@ -65,11 +65,7 @@ body {
 .light-theme-article-title a {
   color: #222;
 }
-.light-theme-wrapper a:hover,
-.light-theme-article-wrapper a:hover,
-.light-theme-article-title a:hover {
-  /* border-bottom: 4px solid #222; */
-}
+
 .light-theme-article-wrapper {
   border-left: 3px solid #222;
 }
@@ -93,14 +89,7 @@ body {
   max-width: 50px;
   max-height: 50px;
 }
-.green {
-  background: green;
-  min-height: 100px;
-}
-.yellow {
-  background: yellow;
-  min-height: 100px;
-}
+
 .title {
   font-family: "Raleway", sans-serif;
   /* font-style: italic; */
