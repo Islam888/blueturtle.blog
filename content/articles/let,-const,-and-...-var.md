@@ -3,6 +3,8 @@ title: "Let, Const, and ... Var"
 date: 2019-02-11T14:20:24+02:00
 draft: false
 tags: ["article", "JS"]
+description: "Where and why to use which?"
+cover: "/img/cover/let.jpg"
 ---
 
 {{% parawrap %}}

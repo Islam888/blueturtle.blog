@@ -3,6 +3,8 @@ title: "Why We Write <!DOCTYPE html> ?"
 date: 2019-03-11T01:13:08+02:00
 draft: false
 tags: ["article", "beginner", "HTML"]
+description: "Things we take as granted."
+cover: "/img/cover/tape.jpg"
 ---
 {{% parawrap %}}
 Yes, this is for the absolute beginner, and also for those non-beginners who forgot. I am going to look back behinds and re-discover things we take as granted by asking "WHAT", "WHY", and "HOW".

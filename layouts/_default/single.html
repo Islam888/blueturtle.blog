@@ -7,8 +7,15 @@
         </div>
         <div class="col-12 text-secondary pt-1">
             <div>{{ partial "date" . }}<span class="pl-3">{{ partial "turtles" . }} {{ partial "readtime" . }} </span></div>
-        </div>    
-        <br />       
+        </div> 
+    </div>
+</div>
+        <br />
+        {{if .Params.cover }}
+            {{ partial "coverimg" . }}  
+        {{end}} 
+<div class="container-fluid pt-3">
+    <div class="row no-gutters">        
         {{.Content}}
     </div>
 </div>

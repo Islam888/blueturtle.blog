@@ -3,6 +3,7 @@ title: "How to Trap Focus Inside a Modal"
 date: 2018-08-10T13:04:33+02:00
 draft: false
 tags: ["tutorial", "A11y", "JS"]
+description: "An accessibility issue being solved."
 ---
 
 {{% parawrap %}}

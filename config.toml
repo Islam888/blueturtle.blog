@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "blue turtle blog"
 PygmentsCodeFences = true
 pygmentsStyle = "monokai"
+[Taxonomies]
+  tag = "tags"
+  description = ""
+  cover = ""
 [sitemap]
   changefreq = "monthly"
   filename = "sitemap.xml"

@@ -3,97 +3,113 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blueturtle.blog/articles/why-we-write-doctype-html/</loc>
+    <loc>https://blueturtleblog.netlify.com/articles/why-we-write-doctype-html/</loc>
     <lastmod>2019-03-11T01:13:08+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/articles/let-const-and-...-var/</loc>
+    <loc>https://blueturtleblog.netlify.com/articles/let-const-and-...-var/</loc>
     <lastmod>2019-02-11T14:20:24+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</loc>
+    <loc>https://blueturtleblog.netlify.com/tutorials/how-to-trap-focus-inside-a-modal/</loc>
     <lastmod>2018-08-10T13:04:33+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tags/a11y/</loc>
+    <loc>https://blueturtleblog.netlify.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blueturtleblog.netlify.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blueturtleblog.netlify.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blueturtleblog.netlify.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blueturtleblog.netlify.com/tags/a11y/</loc>
     <lastmod>2018-08-10T13:04:33+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tags/article/</loc>
+    <loc>https://blueturtleblog.netlify.com/tags/article/</loc>
     <lastmod>2019-03-11T01:13:08+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/articles/</loc>
+    <loc>https://blueturtleblog.netlify.com/articles/</loc>
     <lastmod>2019-03-11T01:13:08+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tags/beginner/</loc>
+    <loc>https://blueturtleblog.netlify.com/tags/beginner/</loc>
     <lastmod>2019-03-11T01:13:08+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blueturtle.blog/tags/html/</loc>
+    <loc>https://blueturtleblog.netlify.com/tags/html/</loc>
     <lastmod>2019-03-11T01:13:08+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tags/js/</loc>
+    <loc>https://blueturtleblog.netlify.com/tags/js/</loc>
     <lastmod>2019-02-11T14:20:24+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tags/</loc>
+    <loc>https://blueturtleblog.netlify.com/tags/</loc>
     <lastmod>2018-08-10T13:04:33+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tags/tutorial/</loc>
+    <loc>https://blueturtleblog.netlify.com/tags/tutorial/</loc>
     <lastmod>2018-08-10T13:04:33+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog/tutorials/</loc>
+    <loc>https://blueturtleblog.netlify.com/tutorials/</loc>
     <lastmod>2018-08-10T13:04:33+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blueturtle.blog.com/</loc>
+    <loc>https://blueturtleblog.netlify.com/</loc>
     <lastmod>2019-03-11T01:13:08+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
