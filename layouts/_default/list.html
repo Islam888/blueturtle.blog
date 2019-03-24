@@ -1,6 +1,8 @@
 {{ define "main"}}
 {{ partial "about" . }}
 {{ range .Pages }}
-    {{ partial "post" . }}
+    {{if not (eq .Title "Subscribe") }}
+        {{ partial "post" . }}
+    {{end}}
 {{end}}
 {{end}}

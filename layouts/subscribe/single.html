@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/23cce0b8556f5943761203d78/8f973903a975e6ec4b91c62a4.js");</script>
-    <title>Document</title>
-</head>
-<body class="bg-dark">
-    {{ partial "subscribe" . }}
-</body>
-</html>
+{{ define "main" }}
+<div class="container-fluid pt-5">
+    <div class="row no-gutters">
+        {{ partial "subscribe" . }}
+    </div>
+</div>
+{{end}}
+
