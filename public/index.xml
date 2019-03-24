@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blue turtle blog</title>
+    <link>https://blueturtle.blog/</link>
+    <description>Recent content on blue turtle blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Mar 2019 01:13:08 +0200</lastBuildDate>
+    
+	<atom:link href="https://blueturtle.blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why We Write &lt;!DOCTYPE html&gt; ?</title>
+      <link>https://blueturtle.blog/articles/why-we-write-doctype-html/</link>
+      <pubDate>Mon, 11 Mar 2019 01:13:08 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/articles/why-we-write-doctype-html/</guid>
+      <description>Yes, this is for the absolute beginner, and also for those non-beginners who forgot. I am going to look back behinds and re-discover things we take as granted by asking &amp;ldquo;WHAT&amp;rdquo;, &amp;ldquo;WHY&amp;rdquo;, and &amp;ldquo;HOW&amp;rdquo;.
+  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;! DOCTYPE html&amp;gt; is the first html tag written at the beginning of any html file. It is not an element and doesn&amp;rsquo;t has content or closing tag.</description>
+    </item>
+    
+    <item>
+      <title>Let, Const, and ... Var</title>
+      <link>https://blueturtle.blog/articles/let-const-and-...-var/</link>
+      <pubDate>Mon, 11 Feb 2019 14:20:24 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/articles/let-const-and-...-var/</guid>
+      <description>ES6 has introduced some new syntax features. One of them was key words const, and let to declare variables. Let&amp;rsquo;s talk about why they are preferred over var.
+  Scope🔭 var has a function scope. This means it is accessible anywhere in the function it is defined inside. See this example:
+1 2 3 4 5 6 7 8 9 10  function buyHerChocolate(onDiet) { if (onDiet) { var decision = &amp;#34;Don&amp;#39;t do it!</description>
+    </item>
+    
+    <item>
+      <title>How to Trap Focus Inside a Modal</title>
+      <link>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</link>
+      <pubDate>Fri, 10 Aug 2018 13:04:33 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</guid>
+      <description>Trapping focus is one of the important issues concerningaccessibility. In case of assistive technology (like screen readers)users, or keyboard users,trapping focus is a must.
+We are going to talk about How to Trap Focus inside of a modal as long as it is open and transfer focus to the rest of page once it is closed.
+  Let’s see what we have here.
+Hint: If you only want the code snippet, just go to &amp;ldquo;Trap Focus Method&amp;rdquo; section.</description>
+    </item>
+    
+  </channel>
+</rss>

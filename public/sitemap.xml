@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blueturtle.blog/articles/why-we-write-doctype-html/</loc>
+    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/articles/let-const-and-...-var/</loc>
+    <lastmod>2019-02-11T14:20:24+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</loc>
+    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blueturtle.blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blueturtle.blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/a11y/</loc>
+    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/article/</loc>
+    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/articles/</loc>
+    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/beginner/</loc>
+    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/html/</loc>
+    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/js/</loc>
+    <lastmod>2019-02-11T14:20:24+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/</loc>
+    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/tutorial/</loc>
+    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tutorials/</loc>
+    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/</loc>
+    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

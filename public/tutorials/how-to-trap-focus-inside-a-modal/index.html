@@ -1,0 +1,626 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="description" content="Web Development Blog">
+      <meta name="keywords" content="HTML,CSS,JavaScript,React,Bootstrap,Material design,Software, Front-end, nodejs">
+      <meta name="author" content="Islam Sayed">
+      <meta name="theme-color" content="#222">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      
+      <meta name="google-site-verification" content="iSR3cCTKWB1zqHCtUGWFbZggB230CmFZ_utdaRXTOzA" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+      
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+      />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+      <link rel="stylesheet" href="/css/styles.css"/>
+      
+      <title>
+    
+        How to Trap Focus Inside a Modal | Blue Turtle Blog
+    
+</title>
+    </head>
+    <body>
+        <div class="container-fluid wrapper px-0">
+            
+<div class="container-fluid pt-5">
+    <div class="row no-gutters">
+        <div class="col-10 col-md-6">
+            <a href="https://blueturtle.blog" style="text-decoration: none; border: none;">
+                <h1 class="h2 d-inline-block title mb-0">Blue Turtle</h1>
+                <img src="/img/blue turtle.png" class="logo" alt="blue turtle logo">
+            </a>
+        </div>
+        <div class="col-2 col-md-6  text-center">
+            
+        </div>    
+    </div>
+</div>
+
+            
+<div class="container-fluid pt-5">
+    <div class="row no-gutters">
+        <h1 class="article-title h3 col-12">How to Trap Focus Inside a Modal</h1>
+        <div class="col-12 text-secondary small">
+                <ul class="tags">
+        
+            <li class="pr-3"><a class="text-danger" href="/tags/tutorial">#tutorial</a></li>
+        
+            <li class="pr-3"><a class="text-danger" href="/tags/a11y">#A11y</a></li>
+        
+            <li class="pr-3"><a class="text-danger" href="/tags/js">#JS</a></li>
+        
+    </ul>
+
+        </div>
+        <div class="col-12 text-secondary pt-1">
+            <div><time datetime="2018-8-10" class="small text-danger">August 10, 2018</time><span class="pl-3">
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+    <img src="/img/blue turtle.png" class="time-indicator" alt="">
+ <span class="small text-danger">7 min read</span> </span></div>
+        </div> 
+    </div>
+</div>
+        <br />
+         
+<div class="container-fluid pt-3">
+    <div class="row no-gutters">        
+        
+        <div class="col-12 py-2 para">
+            <p>Trapping focus is one of the important issues concerningaccessibility. In case of assistive technology (like screen readers)users, or keyboard users,trapping focus is a must.</p>
+
+<p>We are going to talk about How to Trap Focus inside of a modal as long as it is open and transfer focus to the rest of page once it is closed.</p>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+
+        <div class="col-12 py-2 para">
+            <p>Let’s see what we have here.</p>
+
+<p><em>Hint: If you only want the code snippet, just go to &ldquo;Trap Focus Method&rdquo; section.</em></p>
+
+<p><strong>Contents</strong>:</p>
+
+<ol>
+<li>Terminology.</li>
+<li>tabindex Attribute.</li>
+<li>Element.focus()</li>
+<li>Trap Focus method</li>
+<li>Resources.</li>
+</ol>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+
+        <div class="col-12 py-2 para">
+            <h2 id="terminology">Terminology</h2>
+
+<p>According to <a href="https://allyjs.io/what-is-focusable.html">Ally.js</a> library an HTML element can be a member of exactly one of the following five categories:</p>
+
+<ol>
+<li><p><strong>Inert</strong>: The element is not interactive and thus not focusable. And should not be focused by script (except in rare cases).</p></li>
+
+<li><p><strong>Focusable</strong>: The element can be focused by script Element.focus() and possibly the mouse (or pointer), but not the keyboard.</p></li>
+
+<li><p><strong>Tabbable</strong>: The element is keyboard focusable (“tabbable”), as it is part of the document’s sequential focus navigation order. The element is also focusable by script and possibly the mouse (or pointer). It is important to note that this navigation order is the same as DOM order.</p></li>
+
+<li><p><strong>Only Tabbable</strong>: The element is only keyboard focusable, possibly by the mouse (or pointer), but it cannot be focused by script.</p></li>
+
+<li><p><strong>Forward Focus</strong>: The element will forward focus to another element instead of receiving focus itself.</p></li>
+</ol>
+
+<p>Here is a <a href="https://allyjs.io/data-tables/focusable.html">table</a> of Browser Compatibility of Focusable and Tabbable Elements. It shows which elements are tabbable, focusable, or inert and its compatibility with different browsers.</p>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+
+        <div class="col-12 py-2 para">
+            <h2 id="tabindex-attribute">tabindex Attribute</h2>
+
+<p>The attribute tabindex is a global HTML attribute. It decides which element could be focused and puts it in the sequential focus navigation order (or simply tab order).</p>
+
+<p>Its value can be one of three:</p>
+
+<ol>
+<li><p><strong>Negative value</strong>: <code>tabindex=&quot;-1&quot;</code> removes the element from tab order but it can be focusable by script.</p></li>
+
+<li><p><strong>Zero value</strong>: <code>tabindex=&quot;0&quot;</code> put the element in the tab order and its order is affected by to DOM structure. Note that the visual (CSS) structure does not affect tab order. Therefore, it is a good practice to have a similar viasual and DOM order not to confuse keyboard users.</p></li>
+
+<li><p><strong>Positive value</strong>: <code>tabindex=&quot;1&quot;</code> meaning that the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number in an ascending manner. So <code>tabindex=&quot;2&quot;</code> will precede <code>tabindex=&quot;3&quot;</code>. This is Anti-Pattern and should be avoided because you will end up jumping between elements and this would cause confusion.</p></li>
+</ol>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+
+        <div class="col-12 py-2 para">
+            <h2 id="element-focus">Element.focus()</h2>
+
+<p>It sets focus on a specified element. This does not mean that it outs the element in the tab order, but it drags focus to it in a certain event using script. It can be used to a focusale or not unfocusable element.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Element</span>.<span style="color:#a6e22e">focus</span>();
+</code></pre></div>
+<p>The optional focus option is a boolean value.</p>
+
+<p>If <code>false</code> method will scroll the element into the visible area of the browser window.</p>
+
+<p>If <code>true</code> (default) method will not scroll the element into the visible area of the browser window.</p>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+
+        <div class="col-12 py-2 para">
+            <h2 id="trap-focus-method">Trap Focus Method</h2>
+
+<p>Here comes the exciting part. In this article we will tackle trapping focus inside a modal using JavaScript Of course, it is not the only method.</p>
+
+<p>This a simple page example contains:</p>
+
+<ul>
+<li><p><em><strong>Sign in button</strong></em>. It is not a button in fact. It is just a div acts like a button. That’s why I added <code>tabindex=&quot;0&quot;</code> attribute to it.</p></li>
+
+<li><p><em><strong>Form consists</strong></em> of a Text box and a button.</p></li>
+
+<li><p><em><strong>Modal</strong></em> that pops up when you click Sign in button or press enter while it is focused. It contains:</p>
+
+<ul>
+<li><em><strong>Two Text boxes</strong></em> . One for user name and the second for password entry. And finally a Log in button.</li>
+</ul></li>
+</ul>
+
+<p>The required behavior is that when the modal is open focus is trapped inside it and does not reach other elements until modal is closed.
+<br /></p>
+
+<ul>
+<li><strong><em>HTML</em></strong></li>
+</ul>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- This div to make the overlay effect --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;overlay&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;top&#34;</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;Sign in&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">br</span> /&gt;
+&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Search&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;backgroundElement&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchTextBox backgroundElement&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal&#34;</span>&gt;
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;modal-form&#34;</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+            Username
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;usernameBox&#34;</span> <span style="color:#a6e22e">autocomplete</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span> /&gt;
+        &lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">br</span> /&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+            Password
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">autocomplete</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span> /&gt;
+        &lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Log on&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;logOn&#34;</span> /&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+
+<p><br /></p>
+
+<ul>
+<li><strong><em>Javascript</em></strong></li>
+</ul>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">93
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allBackgroundElements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(
+  <span style="color:#e6db74">&#39;.backgroundElement, [tabindex=&#34;0&#34;]&#39;</span>
+);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">signInBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.btn&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">logOnBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.logOn&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">modal</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.modal&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">usernameTextBox</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;usernameBox&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchTextBox</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.searchTextBox&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">passwordTextBox</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;password&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">overlay</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;overlay&#34;</span>);
+
+<span style="color:#75715e">//listen for keydown. Check for target of the event.
+</span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;keydown&#34;</span>, <span style="color:#a6e22e">e</span> =&gt; {
+  <span style="color:#75715e">//if target is sign in button, check the key pressed.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">signInBtn</span>) {
+    <span style="color:#75715e">//if key is &#34;Enter&#34;:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Show modal.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Remove elements outside modal from tab order.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Focus on user name text box.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//display overlay.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">keyCode</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">13</span>) {
+      <span style="color:#a6e22e">modal</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;modal-visible&#34;</span>);
+      <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">allBackgroundElements</span>) {
+        <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;tabindex&#34;</span>, <span style="color:#e6db74">&#34;-1&#34;</span>);
+      }
+      <span style="color:#a6e22e">usernameTextBox</span>.<span style="color:#a6e22e">focus</span>();
+      <span style="color:#a6e22e">overlay</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+    }
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">logOnBtn</span>) {
+    <span style="color:#75715e">//if target is log on button, check for key(s) pressed.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//if keys are &#34;shift&#34; and &#34;tab&#34;:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Focus on password text box.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">shiftKey</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">keyCode</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>) {
+      <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+      <span style="color:#a6e22e">passwordTextBox</span>.<span style="color:#a6e22e">focus</span>();
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">keyCode</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">13</span>) {
+      <span style="color:#75715e">//if key is &#34;Enter&#34;:
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//hide modal.
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//Add elements outside modal to tab order.
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//Focus on search text box.
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//hide overlay.
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+      <span style="color:#a6e22e">modal</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#34;modal-visible&#34;</span>);
+      <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">allBackgroundElements</span>) {
+        <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;tabindex&#34;</span>, <span style="color:#e6db74">&#34;0&#34;</span>);
+      }
+      <span style="color:#a6e22e">searchTextBox</span>.<span style="color:#a6e22e">focus</span>();
+      <span style="color:#a6e22e">overlay</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+      <span style="color:#75715e">//if key is &#34;Tab&#34;:
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">//Focus on user name text box.
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">keyCode</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>) {
+      <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+      <span style="color:#a6e22e">usernameTextBox</span>.<span style="color:#a6e22e">focus</span>();
+    }
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">usernameTextBox</span>) {
+    <span style="color:#75715e">//If target is user name text box, check for keys pressed.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//if keys are &#34;shift&#34; and &#34;tab&#34;:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Focus on log on button.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">shiftKey</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">keyCode</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>) {
+      <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+      <span style="color:#a6e22e">logOnBtn</span>.<span style="color:#a6e22e">focus</span>();
+    }
+  }
+});
+
+<span style="color:#75715e">//listen for Click. Check for target of the event.
+</span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">e</span> =&gt; {
+  <span style="color:#75715e">//If target is sign in button:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//Show modal.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//Remove elements outside modal from tab order.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//Focus on user name text box.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//display overlay.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">signInBtn</span>) {
+    <span style="color:#a6e22e">modal</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;modal-visible&#34;</span>);
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">allBackgroundElements</span>) {
+      <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;tabindex&#34;</span>, <span style="color:#e6db74">&#34;-1&#34;</span>);
+    }
+    <span style="color:#a6e22e">usernameTextBox</span>.<span style="color:#a6e22e">focus</span>();
+    <span style="color:#a6e22e">overlay</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">logOnBtn</span>) {
+    <span style="color:#75715e">//if target is log on button:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//hide modal.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Add elements outside modal to tab order.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Focus on search text box.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//hide overlay.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">modal</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#34;modal-visible&#34;</span>);
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">allBackgroundElements</span>) {
+      <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;tabindex&#34;</span>, <span style="color:#e6db74">&#34;0&#34;</span>);
+    }
+    <span style="color:#a6e22e">searchTextBox</span>.<span style="color:#a6e22e">focus</span>();
+    <span style="color:#a6e22e">overlay</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+  }
+});
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p><em><strong>What did I do?</strong></em></p>
+
+<ol>
+<li><p>When the Sign in button is clicked or pressed &ldquo;Enter&rdquo; upon, I opened modal, remove elements outside modal from tab order, and start focusing on the first focusable element of modal.</p></li>
+
+<li><p>Inside modal I took care of the first and last focusable elements, to ensure that when user reaches the last element for example the first element will be the target of the next tab, and when user presses &ldquo;shift+tab&rdquo; while on first element, it will bring focus to the last element. So Focus is trapped inside the modal as long as it is open.</p></li>
+
+<li><p>When user click or press &ldquo;Enter&rdquo; while on Log on button, the modal disappears, and all other elements return focusable again.</p></li>
+</ol>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+
+        <div class="col-12 py-2 para">
+            <h2 id="resources">Resources</h2>
+
+<ul>
+<li><p><a href="https://gomakethings.com/how-to-get-the-first-and-last-focusable-elements-in-the-dom/">How to get the first and last focusable element in the DOM.</a></p></li>
+
+<li><p><a href="https://allyjs.io/data-tables/focusable.html">Focusable Elements — Browser compatibility table.</a></p></li>
+
+<li><p><a href="https://allyjs.io/what-is-focusable.html">What does Focusable mean?</a></p></li>
+
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus">HTMLElement.focus()</a></p></li>
+
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute">Element.removeAttribute()</a></p></li>
+
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList">NodeList.</a></p></li>
+
+<li><p><a href="https://medium.com/@melwinalm/crcreating-keyboard-shortcuts-in-javascripteating-keyboard-shortcuts-in-javascript-763ca19beb9e">Creating keyboard shortcuts using JavaScript.</a></p></li>
+
+<li><p><a href="https://stackoverflow.com/questions/2694640/find-an-element-in-dom-based-on-an-attribute-value#16775485">Find Element based on Attribute Value.</a></p></li>
+</ul>
+
+        </div>
+
+<div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <hr class="col-4"/>
+        </div>     
+    </div>
+
+    </div>
+</div>
+
+            
+<div class="container-fluid ">
+  <div class="row no-gutters">
+    <footer class="mt-5">
+      <div class="container-fluid">
+        <div id="footer-social-wrapper" class="row">
+          <a href="https://www.facebook.com/islam.sayed8" class="social-icon">
+            <svg
+  class="mr-2"
+  height="40px"
+  version="1.1"
+  viewBox="0 0 60 60"
+  width="40px"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1">
+    <g id="facebook">
+      <path
+        d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z"
+        fill="#000000"
+        id="Facebook"
+      />
+      <path
+        d="M25.4622239,47.314313 L25.4622239,29.9989613 L21.9432889,29.9989612 L21.9432889,24.2593563 L25.4622239,24.2593563 L25.4622239,20.7883864 C25.4622239,16.1066422 26.8619948,12.730619 31.9881023,12.730619 L38.0863595,12.730619 L38.0863595,18.45844 L33.7922546,18.45844 C31.6418944,18.45844 31.1518737,19.8873763 31.1518737,21.3837609 L31.1518737,24.2593553 L37.7694231,24.2593558 L36.8661728,29.9989613 L31.1518737,29.9989613 L31.1518737,47.3143123 L25.4622239,47.314313 Z"
+        fill="#1392d3"
+      />
+    </g>
+  </g>
+</svg>
+          </a>
+          <a href="https://twitter.com/islam_sayed8" class="social-icon">
+            <svg
+  class="mr-2"
+  height="40px"
+  version="1.1"
+  viewBox="0 0 60 60"
+  width="40px"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1">
+    <g id="twitter">
+      <path
+        d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z"
+        fill="#000000"
+        id="Twitter"
+      />
+      <path
+        d="M41.0521385,18.4366943 C39.8431846,17.0622015 38.1205385,16.1864641 36.2140615,16.154731 C32.5536,16.0938031 29.5856538,19.1869234 29.5856538,23.063116 C29.5856538,23.6132412 29.6442923,24.1496934 29.7573692,24.6646732 C24.2485846,24.3073526 19.3644692,21.4387706 16.0954154,17.1147218 C15.5248615,18.1508617 15.1979077,19.3618827 15.1979077,20.6591504 C15.1979077,23.1149884 16.3680923,25.2945272 18.1466308,26.5814174 C17.0601231,26.5334499 16.0380692,26.2045378 15.1444385,25.664952 C15.1437923,25.694445 15.1437923,25.7239449 15.1437923,25.7539625 C15.1437923,29.1835497 17.4285923,32.0607076 20.4608308,32.7309383 C19.9046538,32.888538 19.3190769,32.9710163 18.7146,32.967008 C18.2874923,32.9641758 17.8721769,32.9168118 17.4675231,32.831768 C18.3109154,35.6443777 20.7587077,37.6967663 23.6592923,37.764628 C21.3908077,39.6476963 18.5328692,40.7691933 15.4272923,40.762787 C14.8922769,40.7616833 14.3646923,40.727112 13.8461538,40.6605996 C16.7795308,42.6733139 20.2635923,43.8451711 24.0067615,43.8461531 C36.1985538,43.8493518 42.8657308,33.2395109 42.8657308,24.0367687 C42.8657308,23.7348363 42.8591077,23.4345191 42.8465077,23.135652 C44.1415615,22.1706665 45.2652231,20.9607892 46.1538462,19.579219 C44.9652462,20.1150162 43.6876385,20.4708686 42.3470308,20.6201379 C43.7154231,19.7779652 44.7665538,18.4300961 45.2613462,16.8137584 C43.9805077,17.5904923 42.5620385,18.1475129 41.0521385,18.4366943 Z"
+        fill="#1392d3"
+      />
+    </g>
+  </g>
+</svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/islam-sayed-ibrahim"
+            class="social-icon"
+          >
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+ <title/>
+
+ &lt;g>
+  &lt;title>background</title>
+  <rect fill="none" id="canvas_background" height="42" width="42" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="black" fill-rule="evenodd" fill="none">
+   <g stroke="null" id="linkedin">
+    <path stroke="null" id="Linkedin" fill="#000000" d="m19.979228,39.832791c11.006164,0 19.928425,-8.905503 19.928425,-19.890994c0,-10.985491 -8.922261,-19.890994 -19.928425,-19.890994c-11.006164,0 -19.928425,8.905503 -19.928425,19.890994c0,10.985491 8.922261,19.890994 19.928425,19.890994z"/>
+    <path stroke="null" id="svg_1" fill="#1392d3" d="m14.587314,29.107004l0,-12.132717l-3.75698,0l0,12.132717l3.75698,0zm0,-16.433237c-0.02238,-1.08575 -0.747356,-1.912426 -1.925106,-1.912426c-1.178049,0 -1.947784,0.826676 -1.947784,1.912426c0,1.062172 0.747356,1.912764 1.902726,1.912764l0.02238,0c1.200429,0 1.947784,-0.850592 1.947784,-1.912764zm6.129293,16.433237l0,-6.912638c0,-0.369953 0.02679,-0.739905 0.135786,-1.003633c0.297983,-0.739541 0.976167,-1.505092 2.114904,-1.505092c1.491775,0 2.427335,0.845036 2.427335,2.508725l0,6.912638l3.782329,0l0,-7.097611c0,-3.802097 -2.03343,-5.571282 -4.745782,-5.571282c-2.223899,0 -3.200067,1.240992 -3.742093,2.085657l0.027156,-1.622701l-3.775792,0c0.054312,1.161508 0,12.205936 0,12.205936l3.776158,0z"/>
+   </g>
+  </g>
+ </g>
+</svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+        </div>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
