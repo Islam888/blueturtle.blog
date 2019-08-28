@@ -6,10 +6,21 @@
     <description>Recent content on blue turtle blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2019 01:13:08 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 10:19:48 +0200</lastBuildDate>
     
 	<atom:link href="https://blueturtle.blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Now Use Material-UI Icons With Super Ease</title>
+      <link>https://blueturtle.blog/news/now-use-material-ui-icons-with-super-ease/</link>
+      <pubDate>Wed, 28 Aug 2019 10:19:48 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/news/now-use-material-ui-icons-with-super-ease/</guid>
+      <description>Instead of searching for icons in Material icons, and then trying to figure out what the required icon component name would look like, now you can directly search for any icon among 1,000+ official Material icons converted to svg icon components.
+  Wondering how you can use the Material Design icons?
+We are happy to unveil our new icons search directly built in the documentation 🔍✨.https://t.co/RoWxQ7Tib3 pic.twitter.com/k5yCMIC7xt</description>
+    </item>
     
     <item>
       <title>Why We Write &lt;!DOCTYPE html&gt; ?</title>

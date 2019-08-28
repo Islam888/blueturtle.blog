@@ -1,7 +1,7 @@
 ---
 title: "Now Use Material-UI Icons With Super Ease"
 date: 2019-08-28T10:19:48+02:00
-draft: true
+draft: false
 tags: ["news", "React", "material-ui"]
 description: "Material-UI tweets its new icons search feature in its docs."
 cover: "/img/cover/Material-UI.png"
