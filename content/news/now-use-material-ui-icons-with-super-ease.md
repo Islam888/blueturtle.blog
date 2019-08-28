@@ -7,7 +7,6 @@ description: "Material-UI tweets its new icons search feature in its docs."
 cover: "/img/cover/Material-UI.png"
 ---
 
-{{% parawrap %}}
 Instead of searching for icons in [Material icons](https://material.io/tools/icons/?style=baseline), and then trying to figure out what the required icon component name would look like, now you can directly search for any icon among 1,000+ official Material icons converted to svg icon components.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Wondering how you can use the Material Design icons?<br>We are happy to unveil our new icons search directly built in the documentation 🔍✨.<a href="https://t.co/RoWxQ7Tib3">https://t.co/RoWxQ7Tib3</a> <a href="https://t.co/k5yCMIC7xt">pic.twitter.com/k5yCMIC7xt</a></p>&mdash; Material-UI (@MaterialUI) <a href="https://twitter.com/MaterialUI/status/1164302839033794561?ref_src=twsrc%5Etfw">August 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
