@@ -3,10 +3,19 @@
     <div class="row no-gutters">
         <h1 class="article-title h3 col-12">{{.Title}}</h1>
         <div class="col-12 text-secondary small">
-            {{ partial "tags" . }}
+            {{if .Params.tags }}
+                {{ partial "tags" . }}
+            {{end}}
         </div>
         <div class="col-12 text-secondary pt-1">
-            <div>{{ partial "date" . }}<span class="pl-3">{{ partial "turtles" . }} {{ partial "readtime" . }} </span></div>
+            <div>
+                    {{if .Params.tags }}
+                        {{ partial "date" . }}
+                    {{end}}
+                    {{if not (eq .Params.title "Mentees") }}
+                    <span class="pl-3">{{ partial "turtles" . }} {{ partial "readtime" . }} </span>
+                    {{end}}
+                </div>
         </div> 
     </div>
 </div>
@@ -14,9 +23,14 @@
         {{if .Params.cover }}
             {{ partial "coverimg" . }}  
         {{end}} 
-<div class="container-fluid pt-3">
-    <div class="row no-gutters">        
-        {{.Content}}
-    </div>
-</div>
+        {{if eq .Params.title "Mentees" }}
+            {{ partial "mentee-form" . }}
+        {{else}}
+        <div class="container-fluid pt-3">
+                <div class="row no-gutters">        
+                    {{.Content}}  
+                </div>
+            </div>
+        {{end}}
+
 {{end}}

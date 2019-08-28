@@ -1,7 +1,7 @@
 {{ define "main"}}
 {{ partial "about" . }}
 {{ range .Pages }}
-    {{if not (eq .Title "Subscribe") }}
+    {{if not (eq .Title "Mentees") }}
         {{ partial "post" . }}
     {{end}}
 {{end}}

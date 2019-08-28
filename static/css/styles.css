@@ -190,4 +190,7 @@ a:hover:not(.social-icon) {
   font-style: italic;
 }
 
-
+input,
+textarea {
+  background: #e4e4e4 !important;
+}
