@@ -6,10 +6,20 @@
     <description>Recent content in Js on blue turtle blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Feb 2019 14:20:24 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 19:32:04 +0200</lastBuildDate>
     
 	<atom:link href="https://blueturtle.blog/tags/js/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Images Native Lazy Loading and Its Polyfill</title>
+      <link>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</link>
+      <pubDate>Sat, 31 Aug 2019 19:32:04 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</guid>
+      <description>What is Lazy loading Images, and videos consume a huge amount of data, and affects web performances. If your web page contains many images (or videos), it is true that some -if not many- of them are out of viewport. The normal behaviour of any browser is to load all images during the web page loading which may slow loading time.
+Lazy loading is to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads.</description>
+    </item>
     
     <item>
       <title>Let, Const, and ... Var</title>

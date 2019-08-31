@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</loc>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blueturtle.blog/news/now-use-material-ui-icons-with-super-ease/</loc>
     <lastmod>2019-08-28T10:19:48+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -82,14 +89,14 @@
   
   <url>
     <loc>https://blueturtle.blog/tags/html/</loc>
-    <lastmod>2019-03-11T01:13:08+02:00</lastmod>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blueturtle.blog/tags/js/</loc>
-    <lastmod>2019-02-11T14:20:24+02:00</lastmod>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -116,6 +123,13 @@
   </url>
   
   <url>
+    <loc>https://blueturtle.blog/tags/performance/</loc>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blueturtle.blog/tags/react/</loc>
     <lastmod>2019-08-28T10:19:48+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -131,21 +145,21 @@
   
   <url>
     <loc>https://blueturtle.blog/tags/tutorial/</loc>
-    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blueturtle.blog/tutorials/</loc>
-    <lastmod>2018-08-10T13:04:33+02:00</lastmod>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blueturtle.blog/</loc>
-    <lastmod>2019-08-28T10:19:48+02:00</lastmod>
+    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorials on blue turtle blog</title>
-    <link>https://blueturtle.blog/tutorials/</link>
-    <description>Recent content in Tutorials on blue turtle blog</description>
+    <title>Performance on blue turtle blog</title>
+    <link>https://blueturtle.blog/tags/performance/</link>
+    <description>Recent content in Performance on blue turtle blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 31 Aug 2019 19:32:04 +0200</lastBuildDate>
     
-	<atom:link href="https://blueturtle.blog/tutorials/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blueturtle.blog/tags/performance/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,18 +19,6 @@
       <guid>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</guid>
       <description>What is Lazy loading Images, and videos consume a huge amount of data, and affects web performances. If your web page contains many images (or videos), it is true that some -if not many- of them are out of viewport. The normal behaviour of any browser is to load all images during the web page loading which may slow loading time.
 Lazy loading is to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads.</description>
-    </item>
-    
-    <item>
-      <title>How to Trap Focus Inside a Modal</title>
-      <link>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</link>
-      <pubDate>Fri, 10 Aug 2018 13:04:33 +0200</pubDate>
-      
-      <guid>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</guid>
-      <description>Trapping focus is one of the important issues concerningaccessibility. In case of assistive technology (like screen readers)users, or keyboard users,trapping focus is a must.
-We are going to talk about How to Trap Focus inside of a modal as long as it is open and transfer focus to the rest of page once it is closed.
-  Let’s see what we have here.
-Hint: If you only want the code snippet, just go to &amp;ldquo;Trap Focus Method&amp;rdquo; section.</description>
     </item>
     
   </channel>

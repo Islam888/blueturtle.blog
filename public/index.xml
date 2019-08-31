@@ -6,10 +6,20 @@
     <description>Recent content on blue turtle blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2019 10:19:48 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 19:32:04 +0200</lastBuildDate>
     
 	<atom:link href="https://blueturtle.blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Images Native Lazy Loading and Its Polyfill</title>
+      <link>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</link>
+      <pubDate>Sat, 31 Aug 2019 19:32:04 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</guid>
+      <description>What is Lazy loading Images, and videos consume a huge amount of data, and affects web performances. If your web page contains many images (or videos), it is true that some -if not many- of them are out of viewport. The normal behaviour of any browser is to load all images during the web page loading which may slow loading time.
+Lazy loading is to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads.</description>
+    </item>
     
     <item>
       <title>Now Use Material-UI Icons With Super Ease</title>
@@ -18,8 +28,7 @@
       
       <guid>https://blueturtle.blog/news/now-use-material-ui-icons-with-super-ease/</guid>
       <description>Instead of searching for icons in Material icons, and then trying to figure out what the required icon component name would look like, now you can directly search for any icon among 1,000+ official Material icons converted to svg icon components.
-
-  Wondering how you can use the Material Design icons?
+  Wondering how you can use the Material Design icons?
 We are happy to unveil our new icons search directly built in the documentation 🔍✨.https://t.co/RoWxQ7Tib3 pic.twitter.com/k5yCMIC7xt</description>
     </item>
     
@@ -30,8 +39,7 @@ We are happy to unveil our new icons search directly built in the documentation 
       
       <guid>https://blueturtle.blog/articles/why-we-write-doctype-html/</guid>
       <description>Yes, this is for the absolute beginner, and also for those non-beginners who forgot. I am going to look back behinds and re-discover things we take as granted by asking &amp;ldquo;WHAT&amp;rdquo;, &amp;ldquo;WHY&amp;rdquo;, and &amp;ldquo;HOW&amp;rdquo;.
-
-  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;! DOCTYPE html&amp;gt; is the first html tag written at the beginning of any html file. It is not an element and doesn&amp;rsquo;t has content or closing tag.</description>
+  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;! DOCTYPE html&amp;gt; is the first html tag written at the beginning of any html file. It is not an element and doesn&amp;rsquo;t has content or closing tag.</description>
     </item>
     
     <item>
@@ -41,8 +49,7 @@ We are happy to unveil our new icons search directly built in the documentation 
       
       <guid>https://blueturtle.blog/articles/let-const-and-...-var/</guid>
       <description>ES6 has introduced some new syntax features. One of them was key words const, and let to declare variables. Let&amp;rsquo;s talk about why they are preferred over var.
-
-  Scope🔭 var has a function scope. This means it is accessible anywhere in the function it is defined inside. See this example:
+  Scope🔭 var has a function scope. This means it is accessible anywhere in the function it is defined inside. See this example:
 1 2 3 4 5 6 7 8 9 10  function buyHerChocolate(onDiet) { if (onDiet) { var decision = &amp;#34;Don&amp;#39;t do it!</description>
     </item>
     
@@ -54,8 +61,7 @@ We are happy to unveil our new icons search directly built in the documentation 
       <guid>https://blueturtle.blog/tutorials/how-to-trap-focus-inside-a-modal/</guid>
       <description>Trapping focus is one of the important issues concerningaccessibility. In case of assistive technology (like screen readers)users, or keyboard users,trapping focus is a must.
 We are going to talk about How to Trap Focus inside of a modal as long as it is open and transfer focus to the rest of page once it is closed.
-
-  Let’s see what we have here.
+  Let’s see what we have here.
 Hint: If you only want the code snippet, just go to &amp;ldquo;Trap Focus Method&amp;rdquo; section.</description>
     </item>
     
