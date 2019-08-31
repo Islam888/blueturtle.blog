@@ -14,9 +14,7 @@ body {
   background: #222;
   border-left: 3px solid #d1d1d1;
 }
-.article-wrapper:hover {
-  background: #383838;
-}
+
 .article-title {
   /* font-family: "Raleway", sans-serif; */
   font-family: 'Josefin Sans', sans-serif;
