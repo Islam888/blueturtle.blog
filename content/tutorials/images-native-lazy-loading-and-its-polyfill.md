@@ -12,6 +12,10 @@ cover: "/img/cover/lazyloading.jpg"
 Images, and videos consume a huge amount of data, and affects web performances. If your web page contains many images (or videos), it is true that some -if not many- of them are out of viewport. The normal behaviour of any browser is to load all images during the web page loading which may slow loading time. 
 
 Lazy loading is used to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads. Thus decreases the time the web page needs to firstly load.
+
+{{< youtube id="bE2jCvZAdqs" >}}
+<figcaption style="text-align: center;">Lazy loading in action.</figcaption>
+
 {{% /parawrap %}}
 
 {{% parawrap %}}
@@ -81,10 +85,6 @@ if ('loading' in HTMLImageElement.prototype) {
     document.body.appendChild(script);
 }
 {{</ highlight >}}
-{{% /parawrap %}}
-{{% parawrap %}}
-{{< youtube id="bE2jCvZAdqs" >}}
-<figcaption style="text-align: center;">Lazy loading in action.</figcaption>
 {{% /parawrap %}}
 
 {{% parawrap %}}
