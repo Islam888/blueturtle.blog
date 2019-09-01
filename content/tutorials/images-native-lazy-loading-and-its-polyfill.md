@@ -4,7 +4,7 @@ date: 2019-08-31T19:32:04+02:00
 draft: false
 tags: ["tutorial", "performance", "HTML", "JS"]
 description: "How to natively lazy load images and iframes starting supported from Chrome 75, and polyfill for other browsers."
-cover: ""
+cover: "/img/cover/lazyloading.jpg"
 ---
 
 {{% parawrap %}}
