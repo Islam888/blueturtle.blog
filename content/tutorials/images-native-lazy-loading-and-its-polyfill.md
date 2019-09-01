@@ -11,7 +11,7 @@ cover: "/img/cover/lazyloading.jpg"
 ## What is Lazy loading
 Images, and videos consume a huge amount of data, and affects web performances. If your web page contains many images (or videos), it is true that some -if not many- of them are out of viewport. The normal behaviour of any browser is to load all images during the web page loading which may slow loading time. 
 
-Lazy loading is to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads. Thus decreases the time the web page needs to firstly load.
+Lazy loading is used to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads. Thus decreases the time the web page needs to firstly load.
 {{% /parawrap %}}
 
 {{% parawrap %}}
@@ -25,7 +25,7 @@ Developers use javascript plugins to make lazy loading. The good news is that Na
 
 {{</ highlight >}}
 
-The value of the attribute `loading` can be either:
+#### The value of the attribute `loading` can be either:
 
 - **lazy**  => _tell the browser to load image just before showing onthe screen._
 - **eager** => _make browser load image as soon as possible. This can be added to the images that will appear inside viewport once theweb page loads._
@@ -42,7 +42,7 @@ There are many javascript plugins to achieve lazy loading. They depend on replac
 {{</ highlight >}}
 Then use javascript to detect when image is close to the viewport to copy the value of the `data-src` attribute to the `src` attribute so the browser can load it.
 
-Examples for such libraries: 
+#### Examples for such libraries: 
 
 - [vanilla-lazyload.](https://www.andreaverlicchi.eu/lazyload)
 - [lazysizes.](https://github.com/aFarkas/lazysizes)
@@ -84,6 +84,7 @@ if ('loading' in HTMLImageElement.prototype) {
 {{% /parawrap %}}
 {{% parawrap %}}
 {{< youtube id="bE2jCvZAdqs" >}}
+<figcaption>Lazy loading in action.</figcaption>
 {{% /parawrap %}}
 
 {{% parawrap %}}
