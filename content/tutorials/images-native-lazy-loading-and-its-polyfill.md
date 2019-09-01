@@ -84,7 +84,7 @@ if ('loading' in HTMLImageElement.prototype) {
 {{% /parawrap %}}
 {{% parawrap %}}
 {{< youtube id="bE2jCvZAdqs" >}}
-<figcaption>Lazy loading in action.</figcaption>
+<figcaption style="text-align: center;">Lazy loading in action.</figcaption>
 {{% /parawrap %}}
 
 {{% parawrap %}}
