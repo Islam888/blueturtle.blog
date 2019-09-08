@@ -2,9 +2,9 @@
 title: "With Firefox69 Privacy Is the Default"
 date: 2019-09-08T10:18:27+02:00
 draft: false
-tags: []
-description: ""
-cover: ""
+tags: [news, Firefox, privacy]
+description: "Firefox69 enchanced privacy feature."
+cover: "/img/cover/firefox.jpg"
 ---
 
 {{% parawrap %}}
