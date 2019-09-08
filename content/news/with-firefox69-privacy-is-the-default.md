@@ -48,7 +48,7 @@ To turn on strict mode, you will have to go to **options**, then chose **Privacy
 {{% /parawrap %}}
 
 {{% parawrap %}}
-## Block autoplay video's audio
+### Block autoplay video's audio
 
 You have three options with videos in Firefox:
 
