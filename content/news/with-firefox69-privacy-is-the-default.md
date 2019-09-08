@@ -4,7 +4,7 @@ date: 2019-09-08T10:18:27+02:00
 draft: false
 tags: [news, Firefox, privacy]
 description: "Firefox69 enchanced privacy feature."
-cover: "/img/cover/firefox.jpg"
+cover: "/img/cover/firefox.png"
 ---
 
 {{% parawrap %}}
