@@ -18,7 +18,7 @@
       
       <guid>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</guid>
       <description>What is Lazy loading Images, and videos consume a huge amount of data, and affects web performances. If your web page contains many images (or videos), it is true that some -if not many- of them are out of viewport. The normal behaviour of any browser is to load all images during the web page loading which may slow loading time.
-Lazy loading is to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads.</description>
+Lazy loading is used to defer images loading until it is about to enter the viewport, and only load the ones that are displayed once the web page loads.</description>
     </item>
     
     <item>

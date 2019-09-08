@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blueturtle.blog/news/with-firefox69-privacy-is-the-default/</loc>
+    <lastmod>2019-09-08T10:18:27+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blueturtle.blog/tutorials/images-native-lazy-loading-and-its-polyfill/</loc>
     <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -110,7 +117,7 @@
   
   <url>
     <loc>https://blueturtle.blog/news/</loc>
-    <lastmod>2019-08-28T10:19:48+02:00</lastmod>
+    <lastmod>2019-09-08T10:18:27+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -159,7 +166,7 @@
   
   <url>
     <loc>https://blueturtle.blog/</loc>
-    <lastmod>2019-08-31T19:32:04+02:00</lastmod>
+    <lastmod>2019-09-08T10:18:27+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

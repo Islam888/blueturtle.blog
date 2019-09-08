@@ -6,10 +6,20 @@
     <description>Recent content in News on blue turtle blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2019 10:19:48 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2019 10:18:27 +0200</lastBuildDate>
     
 	<atom:link href="https://blueturtle.blog/news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>With Firefox69 Privacy Is the Default</title>
+      <link>https://blueturtle.blog/news/with-firefox69-privacy-is-the-default/</link>
+      <pubDate>Sun, 08 Sep 2019 10:18:27 +0200</pubDate>
+      
+      <guid>https://blueturtle.blog/news/with-firefox69-privacy-is-the-default/</guid>
+      <description>Privacy is not an option in Firefox69 browser version. It is default by default. With the new release of the browser, these are the new features it prsents for its users:
+ Block Third-Party Tracking Cookies (by default). Block Cryptominers (by default). Block Fingerprinting (on strict mode - you have to enable it,and I&amp;rsquo;m going to show you how). Block autoplay video&amp;rsquo;s audio (by default).    Block Third-Party Tracking Cookies As mentioned in mozilla blog post, the new feature works behind-the-scenes to keep a company from forming a profile of you based on their tracking of your browsing behavior across websites — often without your knowledge or consent.</description>
+    </item>
     
     <item>
       <title>Now Use Material-UI Icons With Super Ease</title>
