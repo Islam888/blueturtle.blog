@@ -95,6 +95,13 @@
   </url>
   
   <url>
+    <loc>https://blueturtle.blog/tags/firefox/</loc>
+    <lastmod>2019-09-08T10:18:27+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blueturtle.blog/tags/html/</loc>
     <lastmod>2019-08-31T19:32:04+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -124,7 +131,7 @@
   
   <url>
     <loc>https://blueturtle.blog/tags/news/</loc>
-    <lastmod>2019-08-28T10:19:48+02:00</lastmod>
+    <lastmod>2019-09-08T10:18:27+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -132,6 +139,13 @@
   <url>
     <loc>https://blueturtle.blog/tags/performance/</loc>
     <lastmod>2019-08-31T19:32:04+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blueturtle.blog/tags/privacy/</loc>
+    <lastmod>2019-09-08T10:18:27+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

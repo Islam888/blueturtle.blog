@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>News on blue turtle blog</title>
-    <link>https://blueturtle.blog/tags/news/</link>
-    <description>Recent content in News on blue turtle blog</description>
+    <title>Firefox on blue turtle blog</title>
+    <link>https://blueturtle.blog/tags/firefox/</link>
+    <description>Recent content in Firefox on blue turtle blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 08 Sep 2019 10:18:27 +0200</lastBuildDate>
     
-	<atom:link href="https://blueturtle.blog/tags/news/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blueturtle.blog/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <guid>https://blueturtle.blog/news/with-firefox69-privacy-is-the-default/</guid>
       <description>Privacy is not an option in Firefox69 browser version. It is default by default. With the new release of the browser, these are the new features it prsents for its users:
  Block Third-Party Tracking Cookies (by default). Block Cryptominers (by default). Block Fingerprinting (on strict mode - you have to enable it,and I&amp;rsquo;m going to show you how). Block autoplay video&amp;rsquo;s audio (by default).    Block Third-Party Tracking Cookies As mentioned in mozilla blog post, the new feature works behind-the-scenes to keep a company from forming a profile of you based on their tracking of your browsing behavior across websites — often without your knowledge or consent.</description>
-    </item>
-    
-    <item>
-      <title>Now Use Material-UI Icons With Super Ease</title>
-      <link>https://blueturtle.blog/news/now-use-material-ui-icons-with-super-ease/</link>
-      <pubDate>Wed, 28 Aug 2019 10:19:48 +0200</pubDate>
-      
-      <guid>https://blueturtle.blog/news/now-use-material-ui-icons-with-super-ease/</guid>
-      <description>Instead of searching for icons in Material icons, and then trying to figure out what the required icon component name would look like, now you can directly search for any icon among 1,000+ official Material icons converted to svg icon components.
-  Wondering how you can use the Material Design icons?
-We are happy to unveil our new icons search directly built in the documentation 🔍✨.https://t.co/RoWxQ7Tib3 pic.twitter.com/k5yCMIC7xt</description>
     </item>
     
   </channel>
